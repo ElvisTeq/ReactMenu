@@ -1,0 +1,10 @@
+## 1
+
+- Create/Manage folder names
+  UI / Cart / Layout / Meals
+
+* 1. Header created
+
+- Importing images in React
+  => import mealsImage from "../../assets/meals.jpg";
+  => <img src={mealsImage} />
