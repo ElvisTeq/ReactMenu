@@ -11,7 +11,7 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////
 
-## 2
+## 2 (Header)
 
 - Created separate Component for "button" in "Header"
   => "HeaderCartButton.js"
@@ -19,3 +19,12 @@
 * 1. Using SVG code in JSX
      => imported a componen with a function that returns a "SVG image"
      => Added <SVGFunction /> in JSX
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+## 3 (Meals)
+
+- Created
+  => "AvailableMeals.js" (Holds data, returns them into JSX using ".map")
+  => "MealsSummary.js" (Meals Details/Summary)
+  => "Meals.js" (Wraps/Display "AvailableMeals.js" and "MealsSummary.js" together)
