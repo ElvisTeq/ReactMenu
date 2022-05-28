@@ -8,3 +8,14 @@
 - Importing images in React
   => import mealsImage from "../../assets/meals.jpg";
   => <img src={mealsImage} />
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+## 2
+
+- Created separate Component for "button" in "Header"
+  => "HeaderCartButton.js"
+
+* 1. Using SVG code in JSX
+     => imported a componen with a function that returns a "SVG image"
+     => Added <SVGFunction /> in JSX
