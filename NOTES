@@ -65,3 +65,10 @@
 
 - Added
   => <div id="overlays"></div> (to the index.html for "React Portal")
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+## 7 (Cart & Modal State) Show/Hide Cart Modal
+
+- Implemented with "useState" in "App.js" (Where <Cart> is Called)
+  - Using "props" to pass function to turn on/off Cart Modal

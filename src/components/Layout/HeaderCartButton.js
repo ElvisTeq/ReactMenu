@@ -5,7 +5,7 @@ import CartIcon from "../Cart/CartIcon";
 // <span> => to add separate content inside the button
 const HeaderCartButton = (props) => {
   return (
-    <button className={classes.button}>
+    <button className={classes.button} onClick={props.onClick}>
       <span className={classes.icon}>
         <CartIcon />
       </span>
