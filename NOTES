@@ -50,4 +50,18 @@
 ## 5 (Shopping Cart) Component
 
 - Created
-  => "./Cart/Cart.js" (Cart window)
+  => "./Cart/Cart.js" (Cart Data, Button)
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+## 6 (Modal) via "React Portal"
+
+- To use Portal
+  ----------------------------------------- import ReactDOM from 'react-dom'
+  => {ReactDOM.createPortal(whatToDo, whenElementIdIs('ID in index.html'))}
+
+- Created
+  => "./UI/Modal.js" (Shoppoing Cart Model/Display Window and Background)
+
+- Added
+  => <div id="overlays"></div> (to the index.html for "React Portal")
