@@ -1,5 +1,6 @@
-import react from "react";
+import React from "react";
 import classes from "./MealItem.module.css";
+import MealItemForm from "./MealItemForm";
 
 const MealItem = (props) => {
   // .toFixed(2) => only render 2 decimal numbers
@@ -12,7 +13,9 @@ const MealItem = (props) => {
         <div className={classes.description}>{props.description}</div>
         <div className={classes.price}>{price}</div>
       </div>
-      <div></div>
+      <div>
+        <MealItemForm />
+      </div>
     </li>
   );
 };

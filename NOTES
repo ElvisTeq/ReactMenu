@@ -36,3 +36,11 @@
 - Created
   => "Card.js" (Wrapped around "AvailableMeals.js")
   => "MealItem.js" (Module to display meals added to "AvailableMeals.js")
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+## 4 (Meal Item Form)
+
+- Created
+  => "MealItemForm.js" (Contains +Add Button and Imput Options)
+  => "Input.js" (Contains Imput functionality JSX)
