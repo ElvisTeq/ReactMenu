@@ -44,3 +44,10 @@
 - Created
   => "MealItemForm.js" (Contains +Add Button and Imput Options)
   => "Input.js" (Contains Imput functionality JSX)
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+## 5 (Shopping Cart) Component
+
+- Created
+  => "./Cart/Cart.js" (Cart window)
