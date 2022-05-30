@@ -78,11 +78,18 @@
 ## 8 Adding Cart (Context)
 
 - Created
-  => "cart-context.js" (implemented "React.createContext()")
+  => "cart-context.js" (implemented "React.createContext()") => data will be stored here
   => "CartProvider.js" module (context ".Provider" for "cart-context") (added to "App.js")
 
 ------------------------------------------- React.createContext({anyData})
-To create module with Context data
+To create module that holds the Context data
 
 ------------------------------------------- <anyName.Provider value={}>
 To provide data to the context module
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+## 9 Using The Context
+
+- Using/Consuming the Context from (#8)
+  => "HeaderCartButton.js" (implemented "useContext" to get data from "cart-context.js")
