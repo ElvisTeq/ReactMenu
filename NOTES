@@ -116,3 +116,10 @@ To provide data to the context module
 
 - Implemented
   => "Cart.js" (useContext to get data for <CartItem> to Display)
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+## 13 Added more complex logic to Cart items
+
+- Changed
+  => "CartProvider.js" (Now Cart items will not show duplicated)

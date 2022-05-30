@@ -8,8 +8,27 @@ const defaultCartState = {
 
 const cartReducer = (state, action) => {
   if (action.type === "ADD") {
-    // .concat => to merge array, returns new array
-    const updatedItems = state.items.concat(action.item);
+    // .findIndex() => returns the first index of the element that satisfies the function (runs each time we click on "ADD")
+    const existingCartItemIdex = state.items.findIndex(
+      (item) => item.id === action.item.id
+    );
+
+    // Find duplicate Item
+    const existingCartItem = state.items[existingCartItemIdex];
+    let updatedItems;
+
+    // Merge duplicate items, calculate total
+    if (existingCartItem) {
+      const updatedItem = {
+        ...existingCartItem,
+        amount: existingCartItem.amount + action.item.amount,
+      };
+      updatedItems = [...state.items]; // Store all prev.items
+      updatedItems[existingCartItemIdex] = updatedItem; // Update/Add merged item
+    } else {
+      updatedItems = state.items.concat(action.item); // .concat => to merge array, returns new array
+    }
+
     const updatedTotalAmount =
       state.totalAmount + action.item.price * action.item.amount;
     // prev.amount + new item price * quantity
