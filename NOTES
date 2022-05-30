@@ -79,7 +79,7 @@
 
 - Created
   => "cart-context.js" (implemented "React.createContext()") => data will be stored here
-  => "CartProvider.js" module (context ".Provider" for "cart-context") (added to "App.js")
+  => "CartProvider.js" module (functionality ".Provider" for "cart-context") (added to "App.js")
 
 ------------------------------------------- React.createContext({anyData})
 To create module that holds the Context data
@@ -100,3 +100,12 @@ To provide data to the context module
 
 - Implemented
   => "CartProvider.js" (useReducer to Update Cart Items)
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+## 11 Working with Refs & Forwarding Refs
+
+- Implemented
+  => "MealItemForm.js" ("useRef" to get Data from another Component)
+  => "Input.js" ("React.forwardRef" To pass data as Ref)
+  => "MealItem.js" ("useContext" to get the module that contains "Cart Data" to Add Items)
