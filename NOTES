@@ -109,3 +109,10 @@ To provide data to the context module
   => "MealItemForm.js" ("useRef" to get Data from another Component)
   => "Input.js" ("React.forwardRef" To pass data as Ref)
   => "MealItem.js" ("useContext" to get the module that contains "Cart Data" to Add Items)
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+## 12 Outputting Cart Items using Context
+
+- Implemented
+  => "Cart.js" (useContext to get data for <CartItem> to Display)
