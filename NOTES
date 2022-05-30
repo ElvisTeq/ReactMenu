@@ -93,3 +93,10 @@ To provide data to the context module
 
 - Using/Consuming the Context from (#8)
   => "HeaderCartButton.js" (implemented "useContext" to get data from "cart-context.js")
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+## 10 Adding a Cart Reducer
+
+- Implemented
+  => "CartProvider.js" (useReducer to Update Cart Items)
