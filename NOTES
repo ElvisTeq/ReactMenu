@@ -72,3 +72,17 @@
 
 - Implemented with "useState" in "App.js" (Where <Cart> is Called)
   - Using "props" to pass function to turn on/off Cart Modal
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+## 8 Adding Cart (Context)
+
+- Created
+  => "cart-context.js" (implemented "React.createContext()")
+  => "CartProvider.js" module (context ".Provider" for "cart-context") (added to "App.js")
+
+------------------------------------------- React.createContext({anyData})
+To create module with Context data
+
+------------------------------------------- <anyName.Provider value={}>
+To provide data to the context module
