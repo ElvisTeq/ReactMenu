@@ -8,13 +8,17 @@ const defaultCartState = {
 
 const cartReducer = (state, action) => {
   if (action.type === "ADD") {
+    const updatedTotalAmount =
+      state.totalAmount + action.item.price * action.item.amount;
+    // prev.amount + new item price * quantity
+
     // .findIndex() => returns the first index of the element that satisfies the function (runs each time we click on "ADD")
-    const existingCartItemIdex = state.items.findIndex(
+    const existingCartItemIndex = state.items.findIndex(
       (item) => item.id === action.item.id
     );
 
     // Find duplicate Item
-    const existingCartItem = state.items[existingCartItemIdex];
+    const existingCartItem = state.items[existingCartItemIndex];
     let updatedItems;
 
     // Merge duplicate items, calculate total
@@ -24,20 +28,40 @@ const cartReducer = (state, action) => {
         amount: existingCartItem.amount + action.item.amount,
       };
       updatedItems = [...state.items]; // Store all prev.items
-      updatedItems[existingCartItemIdex] = updatedItem; // Update/Add merged item
+      updatedItems[existingCartItemIndex] = updatedItem; // Update/Add merged item
     } else {
       updatedItems = state.items.concat(action.item); // .concat => to merge array, returns new array
     }
-
-    const updatedTotalAmount =
-      state.totalAmount + action.item.price * action.item.amount;
-    // prev.amount + new item price * quantity
-
     return {
       items: updatedItems,
       totalAmount: updatedTotalAmount,
     };
   }
+
+  if (action.type === "REMOVE") {
+    const existingCartItemIndex = state.items.findIndex(
+      (item) => item.id === action.id
+    );
+
+    const existingItem = state.items[existingCartItemIndex];
+    const updatedTotalAmount = state.totalAmount - existingItem.price;
+    let updatedItems;
+
+    if (existingItem.amount === 1) {
+      // Get the rest of the items (Items that were not clicked)
+      updatedItems = state.items.filter((item) => item.id !== action.id);
+    } else {
+      // If ammount > 1 (amount -1)
+      const updatedItem = { ...existingItem, amount: existingItem.amount - 1 };
+      updatedItems = [...state.items]; // store prev.items
+      updatedItems[existingCartItemIndex] = updatedItem; // update items
+    }
+    return {
+      items: updatedItems,
+      totalAmount: updatedTotalAmount,
+    };
+  }
+
   return defaultCartState;
 };
 

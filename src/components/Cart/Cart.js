@@ -7,12 +7,18 @@ import CartItem from "./CartItem";
 const Cart = (props) => {
   // get Ctx Data
   const cartCtx = useContext(CartContext);
+
   const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
-  const hasItems = cartCtx.items.length > 0; // true/false
+  const hasItems = cartCtx.items.length > 0;
 
-  const cartItemRemoveHandler = (id) => {};
+  const cartItemRemoveHandler = (id) => {
+    cartCtx.removeItem(id);
+  };
 
-  const cartItemAddHandler = (item) => {};
+  const cartItemAddHandler = (item) => {
+    // Add all items and set amount=1 for all of them ("CartProvider" will do the calculation)
+    cartCtx.addItem({ ...item, amount: 1 });
+  };
 
   // Consuming Ctx Data => Passing data to <CartItem>
   // .bind() => to pass argument, equivalent to => onRemove={() => cartItemRemoveHandler(item.id)}
@@ -25,7 +31,7 @@ const Cart = (props) => {
           amount={item.amount}
           price={item.price}
           onRemove={cartItemRemoveHandler.bind(null, item.id)}
-          onAdd={cartItemAddHandler(null, item)}
+          onAdd={cartItemAddHandler.bind(null, item)}
         />
       ))}
     </ul>

@@ -123,3 +123,11 @@ To provide data to the context module
 
 - Changed
   => "CartProvider.js" (Now Cart items will not show duplicated)
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+## 14 Making Items Removable
+
+- Implemented
+  => "CartProvider.js" (Implemented Functionality to REMOVE Cart Item on "-" click)
+  => "Cart.js" (Added functionality to Remove/Add Items)
